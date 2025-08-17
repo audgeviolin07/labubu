@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #f8f9fa;
+  --color-foreground: #1a1a1a;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a1a;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1a1a1a;
+
+  --color-primary: #7cb342;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #e8f5e8;
+  --color-secondary-foreground: #1a1a1a;
+
+  --color-muted: #e8f5e8;
+  --color-muted-foreground: #6b7280;
+
+  --color-accent: #4caf50;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #d1d5db;
+  --color-input: #d1d5db;
+  --color-ring: #7cb342;
+
+  --color-chart-1: #7cb342;
+  --color-chart-2: #4caf50;
+  --color-chart-3: #a5d6a7;
+  --color-chart-4: #2e7d32;
+  --color-chart-5: #1b5e20;
+
+  --color-sidebar: #e8f5e8;
+  --color-sidebar-foreground: #1a1a1a;
+  --color-sidebar-primary: #7cb342;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #f1f8e9;
+  --color-sidebar-accent-foreground: #1a1a1a;
+  --color-sidebar-border: #d1d5db;
+  --color-sidebar-ring: #7cb342;
+
+  --color-matcha: #7cb342;
+  --color-matcha-light: #a5d6a7;
+  --color-matcha-deep: #4caf50;
+  --color-matcha-tint: #e8f5e8;
+  --color-surface: #e8f5e8;
+  --color-text-secondary: #6b7280;
+
+  --font-display: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #d1d5db;
+  }
+}
+
+@layer base {
+  :root {
+    --background: #f8f9fa;
+    --foreground: #1a1a1a;
+    --card: #ffffff;
+    --card-foreground: #1a1a1a;
+    --popover: #ffffff;
+    --popover-foreground: #1a1a1a;
+    --primary: #7cb342;
+    --primary-foreground: #ffffff;
+    --secondary: #e8f5e8;
+    --secondary-foreground: #1a1a1a;
+    --muted: #e8f5e8;
+    --muted-foreground: #6b7280;
+    --accent: #4caf50;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #d1d5db;
+    --input: #d1d5db;
+    --ring: #7cb342;
+    --chart-1: #7cb342;
+    --chart-2: #4caf50;
+    --chart-3: #a5d6a7;
+    --chart-4: #2e7d32;
+    --chart-5: #1b5e20;
+    --radius: 1rem;
+    --sidebar-background: #e8f5e8;
+    --sidebar-foreground: #1a1a1a;
+    --sidebar-primary: #7cb342;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f1f8e9;
+    --sidebar-accent-foreground: #1a1a1a;
+    --sidebar-border: #d1d5db;
+    --sidebar-ring: #7cb342;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-foreground);
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    color: var(--color-foreground);
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+    max-width: 1200px;
+  }
+}
