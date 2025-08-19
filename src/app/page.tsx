@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
+import LiveDetectionHero from "@/components/detection/live-detection-hero";
+import { NumberedBadgeCards } from "@/components/feature/numbered-badge-cards";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-200 to-pink-300 font-mono">
+    <div className="min-h-screen bg-gradient-to-br from-green-200 to-green-300 font-mono">
       {/* Header */}
       <header className="flex justify-between items-center px-8 py-6">
         <div className="flex items-center space-x-2">
@@ -61,33 +63,14 @@ export default function Page() {
           </Button>
         </div>
 
-        {/* Demo Section */}
-        <div className="bg-white rounded-lg p-8 shadow-sm max-w-3xl mx-auto">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-gray-600">Photo analysis</span>
-            <div className="w-4 h-4 border-2 border-gray-400 rounded-full"></div>
-          </div>
-          
-          <div className="bg-gray-50 rounded-lg p-6 mb-6 min-h-[300px] flex items-center justify-center">
-            <div className="text-center text-gray-500">
-              <div className="w-16 h-16 mx-auto mb-4 bg-gray-200 rounded-lg flex items-center justify-center">
-                📷
-              </div>
-              <p>Upload a photo or use your camera to analyze performativity levels</p>
-            </div>
-          </div>
+        {/* Live Detection Section */}
+        <div className="bg-white rounded-lg p-8 shadow-sm max-w-4xl mx-auto mb-16">
+          <LiveDetectionHero />
+        </div>
 
-          <div className="flex justify-between items-center">
-            <div className="flex space-x-4">
-              <Button variant="outline" className="text-sm">
-                🔄 Randomize photo
-              </Button>
-              <Button variant="outline" className="text-sm">
-                ✏️ Rewrite analysis
-              </Button>
-            </div>
-            <span className="text-sm text-gray-500">0/500</span>
-          </div>
+        {/* Rating Criteria Section */}
+        <div className="mb-16">
+          <NumberedBadgeCards />
         </div>
 
         {/* Bottom CTA */}

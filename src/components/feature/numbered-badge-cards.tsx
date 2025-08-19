@@ -71,14 +71,14 @@ const DATA: DataItem[] = [
 
 const NumberedBadgeCards = () => {
   return (
-    <section className="bg-surface py-32">
+    <section className="bg-transparent py-16">
       <div className="container">
         <div className="flex flex-col items-center pb-4 text-center">
           <div>
             <span className="my-3 mb-4 flex items-center justify-center">
               <Badge
                 variant="outline"
-                className="bg-background px-3 py-1 border-matcha text-matcha"
+                className="bg-white px-3 py-1 border-green-500 text-green-600"
               >
                 <Sparkles className="mr-2 h-4 w-4" />
                 <p className="text-xs">Rating System</p>
