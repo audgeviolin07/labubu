@@ -16,54 +16,54 @@ const DATA: DataItem[] = [
   {
     id: 1,
     icon: <Heart className="h-4 w-4" />,
-    title: "labubu",
+    title: "Labubu",
     description:
-      "collects kawaii plushies and figurines, particularly labubu characters, as a way to showcase their 'soft masculinity' and aesthetic sensitivity.",
+      "Collects kawaii plushies and figurines, particularly Labubu characters, as a way to showcase their 'soft masculinity' and aesthetic sensitivity.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1755466101193-gt4vosdfbxi.jpg",
   },
   {
     id: 2,
     icon: <Sparkles className="h-4 w-4" />,
-    title: "matcha",
+    title: "Matcha",
     description:
-      "avant-garde styling choices that blur traditional gender lines, from painted nails to statement jewelry.",
+      "Avant-garde styling choices that blur traditional gender lines, from painted nails to statement jewelry.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/6cd5bcd6-4e31-4edb-8785-aea5e6644a66/generated_images/aesthetic-matcha-green-tea-scene%2c-matc-c14d11fd-20250817210846.jpg?",
   },
   {
     id: 3,
     icon: <Palette className="h-4 w-4" />,
-    title: "aesthetic choices",
+    title: "Aesthetic Choices",
     description:
-      "platform shoes, flared pants, and carefully curated vintage pieces that scream 'i understand fashion beyond basic masculinity.'",
+      "Platform shoes, flared pants, and carefully curated vintage pieces that scream 'I understand fashion beyond basic masculinity.'",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1755467118255-a4arnhyuhr.webp",
   },
   {
     id: 4,
     icon: <BookOpen className="h-4 w-4" />,
-    title: "intellectual signaling",
+    title: "Intellectual Signaling",
     description:
-      "carries feminist literature, quotes bell hooks casually in conversation, and has strong opinions about toxic masculinity.",
+      "Carries feminist literature, quotes bell hooks casually in conversation, and has strong opinions about toxic masculinity.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/6cd5bcd6-4e31-4edb-8785-aea5e6644a66/generated_images/stack-of-feminist-literature-books%2c-ti-0af63131-20250817210905.jpg?",
   },
   {
     id: 5,
     icon: <Headphones className="h-4 w-4" />,
-    title: "audio accessories",
+    title: "Audio Accessories",
     description:
-      "premium headphones always visible, curated indie playlists, and an encyclopedic knowledge of underground artists.",
+      "Premium headphones always visible, curated indie playlists, and an encyclopedic knowledge of underground artists.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/6cd5bcd6-4e31-4edb-8785-aea5e6644a66/generated_images/premium-aesthetic-headphones%2c-over-ear-d5d57b4b-20250817210856.jpg?",
   },
   {
     id: 6,
     icon: <Heart className="h-4 w-4" />,
-    title: "social awareness",
+    title: "Social Awareness",
     description:
-      "performative activism on social media, virtue signaling, and being 'an ally' in ways that center themselves.",
+      "Performative activism on social media, virtue signaling, and being 'an ally' in ways that center themselves.",
     image:
       "https://images.unsplash.com/photo-1680499661732-3cfae4690e1c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -77,10 +77,10 @@ const NumberedBadgeCards = () => {
           <div>
           </div>
           <h1 className="pb-3 text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl font-display">
-            rating criteria
+            Rating Criteria
           </h1>
           <p className="text-muted-foreground max-w-md text-sm lg:max-w-2xl lg:text-lg">
-            what makes a male performative?
+            What Makes a Male Performative?
           </p>
         </div>
 
@@ -102,8 +102,8 @@ const NumberedBadgeCards = () => {
                   {feature.description}
                 </p>
               </div>
-              <div className="mt-auto flex min-h-[150px] justify-center rounded-b-3xl">
-                <div className="h-[150px] w-full">
+              <div className="mt-auto flex min-h-[100px] justify-center rounded-b-3xl">
+                <div className="h-[100px] w-full">
                   <img
                     src={feature.image}
                     alt="placeholder"
