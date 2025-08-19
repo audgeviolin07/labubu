@@ -215,7 +215,7 @@ export default function LiveDetectionHero() {
 
             {detectedObjects.length > 0 && (
               <div className="mt-4 p-4 bg-green-50 rounded-xl">
-                <p className="text-sm font-medium text-gray-800 mb-2">Detected Objects:</p>
+                <p className="text-sm font-medium text-gray-800 mb-2">detected objects:</p>
                 <div className="flex flex-wrap gap-2">
                   {detectedObjects.map((obj, idx) => (
                     <span
@@ -242,12 +242,12 @@ export default function LiveDetectionHero() {
 {isStreaming ? (
               <>
                 <Pause className="w-4 h-4 mr-2" />
-                STOP
+                stop
               </>
             ) : (
               <>
                 <Play className="w-4 h-4 mr-2" />
-                START
+                start
               </>
             )}
           </Button>

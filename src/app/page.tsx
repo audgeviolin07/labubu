@@ -17,27 +17,27 @@ export default function Page() {
         </div>
         
         <nav className="hidden md:flex space-x-8 text-sm text-gray-700">
-          <span className="cursor-pointer hover:text-black">PRODUCTS</span>
-          <span className="cursor-pointer hover:text-black">DEVELOPERS</span>
-          <span className="cursor-pointer hover:text-black">PRICING</span>
-          <span className="cursor-pointer hover:text-black">RESOURCES</span>
+          <span className="cursor-pointer hover:text-black">products</span>
+          <span className="cursor-pointer hover:text-black">developers</span>
+          <span className="cursor-pointer hover:text-black">pricing</span>
+          <span className="cursor-pointer hover:text-black">resources</span>
         </nav>
         
         <Button className="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800">
-          ANALYZE NOW
+          analyze now
         </Button>
       </header>
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-8 py-16 text-center">
         {/* Badge */}
-        <div className="inline-block bg-gray-300 text-black text-xs px-3 py-1 rounded-full mb-8 uppercase tracking-wide">
-          NEW - READ THE AI PERFORMATIVITY ANNOUNCEMENT BLOG
+        <div className="inline-block bg-gray-300 text-black text-xs px-3 py-1 rounded-full mb-8 tracking-wide">
+          new - read the ai performativity announcement blog
         </div>
 
         {/* Hero Heading */}
         <h1 className="text-4xl md:text-6xl font-medium text-black mb-6 leading-tight">
-          AI that detects how<br />
+          ai that detects how<br />
           performative you are, in real-time
         </h1>
 
@@ -50,16 +50,16 @@ export default function Page() {
         {/* Feature Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-16">
           <Button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">
-            📸 PHOTO ANALYSIS
+            📸 photo analysis
           </Button>
           <Button variant="outline" className="border-black text-black px-6 py-3 rounded-full hover:bg-black hover:text-white">
-            🎨 BEHAVIOR DESIGN
+            🎨 behavior design
           </Button>
           <Button variant="outline" className="border-black text-black px-6 py-3 rounded-full hover:bg-black hover:text-white">
-            📊 AUTHENTICITY SCORING
+            📊 authenticity scoring
           </Button>
           <Button variant="outline" className="border-black text-black px-6 py-3 rounded-full hover:bg-black hover:text-white">
-            🤖 CONVERSATIONAL AI
+            🤖 conversational ai
           </Button>
         </div>
 
@@ -75,9 +75,9 @@ export default function Page() {
 
         {/* Bottom CTA */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-4">
-          <span className="text-lg text-black">Get started with the most expressive performativity analysis</span>
+          <span className="text-lg text-black">get started with the most expressive performativity analysis</span>
           <Button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">
-            SIGN UP FOR FREE
+            sign up for free
           </Button>
         </div>
       </main>
