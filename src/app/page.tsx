@@ -17,10 +17,10 @@ export default function Page() {
           <span className="text-xl font-medium text-black">Performative Rater</span>
         </div>
         
-        <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-8 text-sm text-black">
-          <a href="#features" className="cursor-pointer hover:text-gray-700">Product</a>
-          <a href="#criteria" className="cursor-pointer hover:text-gray-700">Criteria</a>
-          <a href="#about" className="cursor-pointer hover:text-gray-700">About</a>
+        <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-8 text-sm">
+          <a href="#features" className="cursor-pointer text-black hover:text-gray-700">Product</a>
+          <a href="#criteria" className="cursor-pointer text-black hover:text-gray-700">Criteria</a>
+          <a href="#about" className="cursor-pointer text-black hover:text-gray-700">About</a>
         </nav>
         
         <a href="#features" className="no-underline">
@@ -76,26 +76,23 @@ export default function Page() {
         </div>
 
         {/* About Section */}
-        <section id="about" className="mb-16 pt-8">
-          <div className="max-w-3xl mx-auto border border-gray-200 rounded-lg p-8">
-            <h2 className="text-2xl md:text-3xl font-medium text-black mb-8">About</h2>
+        <section id="about" className="mb-24 pt-8">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="pb-3 text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl font-display text-center mb-8">
+              About
+            </h1>
             <div className="text-left space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
-                Performative Rater uses advanced AI to analyze behavioral patterns and detect performative tendencies in real-time. Our system examines visual cues, body language, and aesthetic choices to provide accurate performativity scores.
+                Dude we just built this for our event. <a href="https://partiful.com/e/SSTm8ubnajngfm5KNoKb" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700">sign up here</a>. It's in SF 
               </p>
-              <p className="text-lg leading-relaxed">
-                Built with cutting-edge computer vision and machine learning algorithms, we've trained our model on thousands of behavioral patterns to identify authentic vs. performative expressions with unprecedented accuracy.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Whether you're analyzing photo content, behavioral design patterns, or authenticity markers, our AI provides instant feedback to help you understand performativity in digital spaces.
-              </p>
+             
             </div>
           </div>
         </section>
 
         {/* Bottom CTA */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-4">
-          <span className="text-lg text-black">Get Started with the Most Accurate Performativity Analysis</span>
+          <span className="text-lg text-black">Get started the most accurate performativity analysis</span>
           <a href="#features" className="no-underline">
             <Button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">
               Get Started
