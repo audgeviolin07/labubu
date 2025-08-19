@@ -34,7 +34,7 @@ export default function Page() {
       <main className="max-w-4xl mx-auto px-8 py-16 text-center">
         {/* Badge */}
         <div className="inline-block bg-white/30 text-black text-xs px-4 py-2 rounded-full mb-8 tracking-wide backdrop-blur-sm">
-          Built by Real Women Lmao. 100K Views on Instagram
+          Built by real women Lmao. 100K views on instagram
         </div>
 
         {/* Hero Heading */}
