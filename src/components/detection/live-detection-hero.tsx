@@ -3,31 +3,8 @@
 import { useState, useCallback, useRef, useEffect, useMemo } from "react"
 import { Button } from "@/components/ui/button"
 import { Camera, Pause, Play, AlertCircle } from "lucide-react"
-import { motion } from "motion/react"
 import { InferenceEngine, CVImage } from "inferencejs"
 
-const FloatingIcon = ({ icon: Icon, delay, className }: { icon: any, delay: number, className?: string }) => {
-  return (
-    <motion.div
-      className={`absolute opacity-20 ${className}`}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ 
-        opacity: 0.2, 
-        scale: 1,
-        y: [0, -10, 0],
-        rotate: [0, 5, -5, 0]
-      }}
-      transition={{ 
-        duration: 4,
-        delay: delay,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }}
-    >
-      <Icon className="w-8 h-8 text-matcha" strokeWidth={1.5} />
-    </motion.div>
-  )
-}
 
 export default function LiveDetectionHero() {
   const [isStreaming, setIsStreaming] = useState(false)
@@ -200,57 +177,12 @@ export default function LiveDetectionHero() {
   }, [isStreaming, startWebcam, stopWebcam])
 
   return (
-    <section className="relative min-h-screen bg-background flex items-center justify-center overflow-hidden py-20">
-      <FloatingIcon 
-        icon={Camera} 
-        delay={0} 
-        className="top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2" 
-      />
-      <FloatingIcon 
-        icon={Camera} 
-        delay={0.5} 
-        className="top-1/3 right-1/4 transform translate-x-1/2 -translate-y-1/2" 
-      />
-      <FloatingIcon 
-        icon={Camera} 
-        delay={1} 
-        className="bottom-1/3 left-1/3 transform -translate-x-1/2 translate-y-1/2" 
-      />
-      <FloatingIcon 
-        icon={Camera} 
-        delay={1.5} 
-        className="bottom-1/4 right-1/3 transform translate-x-1/2 translate-y-1/2" 
-      />
+    <div className="w-full">
+      <div className="mx-auto text-center">
 
-      <div className="container mx-auto px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
-        >
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-6 text-foreground font-display leading-none">
-            Live{" "}
-            <span className="bg-gradient-to-r from-matcha via-matcha-deep to-matcha-light bg-clip-text text-transparent">
-              Object
-            </span>{" "}
-            Detection
-          </h1>
-
-          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-12 font-body leading-relaxed">
-            Experience real-time object detection powered by Roboflow. 
-            Point your camera at anything and watch AI identify objects instantly.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative max-w-4xl mx-auto mb-12"
-        >
-          <div className="bg-card p-6 rounded-3xl shadow-2xl">
-            <div className="relative aspect-video bg-gradient-to-br from-matcha-tint to-surface rounded-2xl overflow-hidden">
+        <div className="relative w-full mb-8">
+          <div className="bg-gray-50 rounded-2xl overflow-hidden">
+            <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden">
               <video
                 ref={videoRef}
                 className="absolute inset-0 w-full h-full object-cover"
@@ -265,79 +197,46 @@ export default function LiveDetectionHero() {
               />
 
               {!isStreaming && !error && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
-                  <div className="w-20 h-20 bg-matcha/20 rounded-full flex items-center justify-center mb-4">
-                    <Camera className="w-10 h-10 text-matcha" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                    <Camera className="w-8 h-8 text-green-600" />
                   </div>
-                  <p className="text-foreground font-medium mb-2">
-                    {isModelLoading ? "Loading AI Model..." : "Ready to Start"}
-                  </p>
-                  <p className="text-sm text-text-secondary">
-                    {isModelLoading ? "This may take a moment..." : "Click below to begin detection"}
-                  </p>
                 </div>
               )}
 
               {error && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-red-50/10">
-                  <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-4">
-                    <AlertCircle className="w-10 h-10 text-red-500" />
+                <div className="absolute inset-0 flex items-center justify-center bg-red-50">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                    <AlertCircle className="w-8 h-8 text-red-500" />
                   </div>
-                  <p className="text-red-600 font-medium mb-2">Error</p>
-                  <p className="text-sm text-red-500 max-w-md">{error}</p>
                 </div>
               )}
             </div>
 
-            {detectedObjects.length > 0 && (
-              <div className="mt-4 p-4 bg-matcha/10 rounded-xl">
-                <p className="text-sm font-medium text-foreground mb-2">Detected Objects:</p>
-                <div className="flex flex-wrap gap-2">
-                  {detectedObjects.map((obj, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-matcha/20 text-matcha-deep rounded-full text-sm font-medium"
-                    >
-                      {obj}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
+        <div>
           <Button
             size="lg"
             onClick={toggleStream}
             disabled={isModelLoading || (!modelLoaded && !isStreaming)}
-            className="bg-matcha hover:bg-matcha-deep text-white px-8 py-4 text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800"
           >
-            {isModelLoading ? (
-              <>Loading Model...</>
-            ) : isStreaming ? (
+{isStreaming ? (
               <>
-                <Pause className="w-5 h-5 mr-2" />
-                Stop Detection
+                <Pause className="w-4 h-4 mr-2" />
+                STOP
               </>
             ) : (
               <>
-                <Play className="w-5 h-5 mr-2" />
-                Start Detection
+                <Play className="w-4 h-4 mr-2" />
+                START
               </>
             )}
           </Button>
-          
-          <p className="text-sm text-text-secondary mt-4">
-            Powered by Roboflow • Real-time AI • Privacy-first
-          </p>
-        </motion.div>
+        </div>
       </div>
-    </section>
+    </div>
   )
 }
