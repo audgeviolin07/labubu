@@ -213,6 +213,22 @@ export default function LiveDetectionHero() {
               )}
             </div>
 
+            {detectedObjects.length > 0 && (
+              <div className="mt-4 p-4 bg-green-50 rounded-xl">
+                <p className="text-sm font-medium text-gray-800 mb-2">Detected Objects:</p>
+                <div className="flex flex-wrap gap-2">
+                  {detectedObjects.map((obj, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm font-medium"
+                    >
+                      {obj}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
           </div>
         </div>
 

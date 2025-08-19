@@ -43,8 +43,8 @@ export default function Page() {
 
         {/* Subheading */}
         <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-2xl mx-auto">
-          Upload photos or use your camera to get instant feedback on<br />
-          performativity levels, authenticity scores, and behavioral insights
+          stand in front of the camera and get ur performativity score<br />
+        
         </p>
 
         {/* Feature Buttons */}
