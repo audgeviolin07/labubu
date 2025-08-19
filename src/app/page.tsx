@@ -81,11 +81,13 @@ export default function Page() {
             <h1 className="pb-3 text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl font-display text-center mb-8">
               About
             </h1>
-            <div className="text-left space-y-6 text-gray-700">
+            <div className="text-center space-y-6 text-gray-700 max-w-md mx-auto">
               <p className="text-lg leading-relaxed">
                 Dude we just built this for our event. <a href="https://partiful.com/e/SSTm8ubnajngfm5KNoKb" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700">sign up here</a>. It's in SF 
               </p>
-             
+            </div>
+            <div className="mt-8 flex justify-center">
+              <img src="/perf.png" alt="Performance" className="max-w-xs h-auto rounded-lg" />
             </div>
           </div>
         </section>
