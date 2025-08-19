@@ -94,7 +94,7 @@ const NumberedBadgeCards = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="mt-4 grid grid-cols-1 gap-4 px-4 sm:px-6 md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:px-12">
+        <div className="mt-4 grid grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-2 md:px-8 lg:grid-cols-2 lg:px-12">
           {DATA.map((feature) => (
             <div
               key={feature.id}
@@ -111,8 +111,8 @@ const NumberedBadgeCards = () => {
                   {feature.description}
                 </p>
               </div>
-              <div className="mt-auto flex min-h-[200px] justify-center rounded-b-3xl">
-                <div className="h-[200px] w-full">
+              <div className="mt-auto flex min-h-[150px] justify-center rounded-b-3xl">
+                <div className="h-[150px] w-full">
                   <img
                     src={feature.image}
                     alt="placeholder"

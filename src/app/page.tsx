@@ -4,7 +4,7 @@ import { NumberedBadgeCards } from "@/components/feature/numbered-badge-cards";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-200 to-green-300 font-mono">
+    <div className="min-h-screen bg-gradient-to-b from-green-300 to-green-100 font-mono">
       {/* Header */}
       <header className="flex justify-between items-center px-8 py-6">
         <div className="flex items-center space-x-2">
@@ -16,11 +16,10 @@ export default function Page() {
           <span className="text-xl font-medium text-black">performative rater</span>
         </div>
         
-        <nav className="hidden md:flex space-x-8 text-sm text-gray-700">
+        <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-8 text-sm text-gray-700">
           <span className="cursor-pointer hover:text-black">products</span>
           <span className="cursor-pointer hover:text-black">developers</span>
           <span className="cursor-pointer hover:text-black">pricing</span>
-          <span className="cursor-pointer hover:text-black">resources</span>
         </nav>
         
         <Button className="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800">
@@ -38,7 +37,7 @@ export default function Page() {
         {/* Hero Heading */}
         <h1 className="text-4xl md:text-6xl font-medium text-black mb-6 leading-tight">
           ai that detects how<br />
-          performative you are, in real-time
+          performative u are, in real-time
         </h1>
 
         {/* Subheading */}
@@ -75,9 +74,9 @@ export default function Page() {
 
         {/* Bottom CTA */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-4">
-          <span className="text-lg text-black">get started with the most expressive performativity analysis</span>
+          <span className="text-lg text-black">get started with the most accurate performativity analysis</span>
           <Button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">
-            sign up for free
+            get started
           </Button>
         </div>
       </main>
