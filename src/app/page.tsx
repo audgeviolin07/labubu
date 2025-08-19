@@ -1,17 +1,19 @@
-import { AnimatedIndicatorNavbar } from "@/components/navbars/animated-indicator-navbar";
-import LiveDetectionHero from "@/components/detection/live-detection-hero";
-import { NumberedBadgeCards } from "@/components/feature/numbered-badge-cards";
-import { SimpleRoundedFaqs } from "@/components/faqs/simple-rounded-faqs";
-import { MinimalCenteredFooter } from "@/components/footers/minimal-centered-footer";
-
 export default function Page() {
   return (
-    <>
-      <AnimatedIndicatorNavbar />
-      <LiveDetectionHero />
-      <NumberedBadgeCards />
-      <SimpleRoundedFaqs />
-      <MinimalCenteredFooter />
-    </>
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Hello World!
+        </h1>
+        <p className="text-lg text-gray-600">
+          This is a test page to verify deployment is working.
+        </p>
+        <div className="mt-8 p-4 bg-green-100 rounded-lg">
+          <p className="text-green-800">
+            ✅ If you can see this, the deployment is successful!
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
