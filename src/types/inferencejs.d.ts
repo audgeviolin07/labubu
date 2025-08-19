@@ -3,6 +3,7 @@ declare module 'inferencejs' {
     constructor(options?: any);
     infer(image: CVImage, options?: any): Promise<any>;
     startPolygon(options?: any): Promise<any>;
+    startWorker(model: string, version: number, apiKey: string): Promise<string>;
     // Add other methods as needed
   }
   
