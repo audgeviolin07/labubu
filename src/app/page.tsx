@@ -57,9 +57,6 @@ export default function Page() {
           <Button variant="outline" className="border-black text-black px-6 py-3 rounded-full hover:bg-black hover:text-white">
             📊 authenticity scoring
           </Button>
-          <Button variant="outline" className="border-black text-black px-6 py-3 rounded-full hover:bg-black hover:text-white">
-            🤖 conversational ai
-          </Button>
         </div>
 
         {/* Live Detection Section */}
