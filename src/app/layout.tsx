@@ -14,6 +14,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "performative rater",
   description: "ai sees how performative u are",
+  icons: {
+    icon: "/matcha.png",
+  },
 };
 
 export default function RootLayout({
